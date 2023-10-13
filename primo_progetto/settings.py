@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prima_app',
+    'seconda_app',
     
 ]
 
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'primo_progetto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'prima/app/templates'),os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'),os.path.join(BASE_DIR,'templates'),os.path.join(BASE_DIR,'seconda_app/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
