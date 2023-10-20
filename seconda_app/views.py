@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 
 def es_if(request):
     context = {
@@ -16,3 +17,10 @@ def if_else_elif(request):
     }
     return render(request, "if_else_elif.html", context)
 
+def es_for(request):
+    context={
+        'list1' : [1, datetime.date(2020,8,12), 'Do not give up!'],
+        'list2' : [2, datetime.date(2018,7,17), 'Do not give up!'],
+        'my_dict' : {'chiave1': 'Valore 1', 'chiave2': 'Valore 2'}
+    }
+    return render(request, "es_for.html", context)
