@@ -34,11 +34,11 @@ def home(request):
  """
 
 def home(request):
-    articoli= Articoli.objects.all()
+    articoli= Articolo.objects.all()
     giornalisti= Giornalista.objects.all()
     context= {"articoli": articoli, "giornalisti": giornalisti}
     print(context)
-    return render(request, "homepage.html", context)
+    return render(request, "homepage_news.html", context)
 
 def articoloDetailView(request, pk):
     articolo=get_object_or_404(Articolo, pk=pk)
