@@ -45,3 +45,14 @@ def articoloDetailView(request, pk):
     context={"articolo": articolo}
     return render (request, "articolo_detail.html", context)
 
+def lista_articoli_gionalisti(request, pk=None):
+    if(pk==None):
+        articoli=Articolo.objects.all()
+    else:
+        articoli = Articolo.objects.filter(giornalista_id=pk)
+    context = {
+        'articoli': articoli,
+        'pk': pk,
+    }
+    return render (request, 'lista_articoli.html', context)
+
