@@ -35,12 +35,13 @@
     <h6>Query 6: Articolo più visualizzato</h6>
     <p>{{ articolo_piu_visualizzato.titolo }} - Visualizzazioni: {{ articolo_piu_visualizzato.visualizzazioni }}</p>
 
-    <h6>Query 7: Giornalisti nati dopo il 1990</h6>
+    <h6>Query 7: Giornalisti nati dopo il 1900</h6>
     <ul>
         {% for giornalista in giornalisti_data %}
             <li>{{ giornalista.nome }} {{ giornalista.cognome }}</li>
         {% endfor %}
     </ul>
+
     <h6>Query 8: Articoli pubblicati il 1 gennaio 2023</h6>
     <ul>
         {% for articolo in articoli_del_giorno %}
