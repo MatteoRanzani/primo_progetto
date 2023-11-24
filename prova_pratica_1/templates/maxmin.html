@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | somma {%endblock title%}
+{%block content%}
+    <b>var1 ={{var1}}</b><br/>
+    <b>var2 ={{var2}}</b><br/>
+    <b>var3 ={{var3}}</b><br/>
+    {% if var1 < var2 %}
+        <font color="red">{{var1}}</font>
+        <font color="green">{{var2}}</font>
+        <font color="black">{{var3}}</font>
+    {% endif %}
+    {% if var1 > var2 %}
+        <font color="green">{{var1}}</font>
+        <font color="red">{{var2}}</font>
+        <font color="black">{{var3}}</font>
+    {% endif %}
+    {% if var1 == var2 %}
+        <font color="black">{{var1}}</font>
+        <font color="black">{{var2}}</font>
+        <font color="black">{{var3}}</font>
+    {% endif %}
+{%endblock content%}

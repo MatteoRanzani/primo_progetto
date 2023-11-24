@@ -43,7 +43,7 @@
                 </div>
               </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="index_news.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   News
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -51,6 +51,15 @@
                   <a class="dropdown-item" href="{% url 'news:lista_articoli'%}">Lista articoli</a>
                   <a class="dropdown-item" href="{% url 'news:lista_giornalisti'%}">Lista giornalisti</a>
                   <a class="dropdown-item" href="{% url 'news:query'%}">Query</a>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index1.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Prova pratica 1
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{% url 'prova_pratica_1:maxmin'%}">Somma</a>
+                  <a class="dropdown-item" href="{% url 'prova_pratica_1:media'%}">Media</a>
+                  <a class="dropdown-item" href="{% url 'prova_pratica_1:voti'%}">Voti</a>
                 </div>
               </li>
           </ul>
