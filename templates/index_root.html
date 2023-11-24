@@ -2,11 +2,9 @@
 
 {%block title%} {{block.super}} | index_root {%endblock title%}
 {%block content%}
-<!--
+
     <a href="/admin">Pannello admin</a>
-    <li><a href="{% url 'prima_app:index'%}"> Index</a></li>
-    <li><a href="{% url 'seconda_app:es_if'%}"> es_if</a></li>
-    <li><a href="{% url 'seconda_app:if_else_elif'%}"> if_else_elif</a></li>
-    <li><a href="{% url 'seconda_app:es_for'%}"> es_for</a></li>
-    -->
+    <li><a href="{% url 'prima_app:index'%}"> Prima App</a></li>
+    <li><a href="{% url 'seconda_app:index_seconda'%}"> Seconda App</a></li>
+    <li><a href="{% url 'news:index_news'%}"> News</a></li>
 {%endblock content%}
