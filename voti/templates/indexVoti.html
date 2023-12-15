@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | index voti{%endblock title%}
+{%block content%}
+    <ol>
+        <li><a href="{% url 'voti:view_a'%}"> Lista materia</a></li>
+        <li><a href="{% url 'voti:view_b'%}"> Voti studenti</a></li>
+        <li><a href="{% url 'voti:view_c'%}"> Media voti</a></li>
+        <li><a href="{% url 'voti:view_d'%}"> Max min voti</a></li>
+    </ol>   
+{%endblock content%}
