@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Articolo, Giornalista
 import datetime
 # Create your views here.
@@ -82,6 +82,32 @@ def lista_giornalisti(request):
 
 def index_news(request):
     return render(request, "index_news.html")
+
+def giornalisti_list_api(request):
+      giornalisti=Giornalista.objects.all()
+      data={'giornalisti':list(giornalisti.values("pk","nome","cognome"))}
+      response=JsonResponse(data)
+      return response
+
+
+def giornalista_api(request,pk):
+    try:
+        giornalista=Giornalista.objects.get(pk=pk)
+        data={'giornalista':{
+            "nome":giornalista.nome,
+            "cognome":giornalista.cognome,
+        }
+        }
+        response=JsonResponse(data)
+    except Giornalista.DoesNotExist:
+        response=JsonResponse({
+            "error": {
+                "code": 404,
+                "message":"Giornalista non trovato"
+            }},
+            status=404)
+    return response
+        
 
 def query_base(request):
     #1. Tutti gli articoli scritti dai giornalisti di un certo cognome:

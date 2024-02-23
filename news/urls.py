@@ -14,6 +14,9 @@ urlpatterns= [
     path("gionalisti/<int:pk>", giornalistaDetailView, name="giornalista_detail"),
     path("lista_giornalisti/", lista_giornalisti, name="lista_giornalisti"),
     path('index_news/', index_news, name="index_news"),
+    path("giornalisti_list_api/", giornalisti_list_api, name="giornalisti_list_api"),
+    path("giornalista_api/<int:pk>",giornalista_api, name="giornalista_api"),
 
+    
 
 ]
