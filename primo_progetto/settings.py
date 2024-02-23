@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'prova_pratica_1',
     'voti',
     'corsheaders',
+    'products',
     
 ]
 
