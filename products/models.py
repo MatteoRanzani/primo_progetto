@@ -13,7 +13,7 @@ class Product(models.Model):
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True, null=True)
     photo = models.ImageField(blank=True, null=True)
-    prince = models.FloatField()
+    price = models.FloatField()
     shipping_cost = models.FloatField()
     quantity = models.PositiveSmallIntegerField()
 

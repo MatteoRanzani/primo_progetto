@@ -124,8 +124,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
+#STATIC_URL e MEDIA_URL definiscono gli URL di base per accedere ai file statici
+#e ai file multimediali nel tuo progetto django
+#mentre MEDIA_ROOT definisce la directory fisica sul server in cui vengono
+#salvati i file multimediali.
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = "uploads"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
