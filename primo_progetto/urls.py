@@ -28,3 +28,7 @@ urlpatterns = [
     path('voti/', include("voti.urls", namespace="voti")),
     path('products/', include("products.urls", namespace="products")),
 ]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
