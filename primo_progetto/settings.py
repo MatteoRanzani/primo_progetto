@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'voti',
     'corsheaders',
     'products',
+    'forms_app',
     
 ]
 
